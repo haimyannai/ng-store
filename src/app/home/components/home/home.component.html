@@ -1,6 +1,8 @@
 <div class="home">
-  <div class="home__banner">
-    <div class="home__text">Shop Online</div>
+  <div class="home__banner"></div>
+  <div class="home__products" *ngIf="products.length">
+    <div class="home__product" *ngFor="let product of products">
+      <app-card [product]="product"> </app-card>
+    </div>
   </div>
-  <div class="home__products"></div>
 </div>
